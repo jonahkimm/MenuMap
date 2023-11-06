@@ -1,6 +1,6 @@
 Group 5 - Lakes:
 Jonah Kim
-Aarham Haider
+[Aarham Haider](https://github.com/AarhamH)
 Aryaman Bahuguna
 Jeet Patel
 
