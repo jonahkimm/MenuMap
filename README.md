@@ -4,6 +4,14 @@ Jonah Kim
 Aryaman Bahuguna
 Jeet Patel
 
+AI Declaration Forms:
+
+[Jonah Kim](/ProjectMileston1_AI_Declaration_Jonah_Kim_301395290.pdf)
+
+[Aarham Haider](/ProjectMileston1_AI_Declaration_Aarham_Haider_301462422.pdf)
+
+
+
 Project Overview:
 MenuMap is a web application project that uses restaurant/dish curation and maps to empower people who may have felt restricted in their diets to expand and experience foreign cuisines and support businesses near them. 
 
