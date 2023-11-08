@@ -10,6 +10,8 @@ AI Declaration Forms:
 
 [Aarham Haider](/ProjectMileston1_AI_Declaration_Aarham_Haider_301462422.pdf)
 
+[Jeet Patel](/ProjectMileston1_AI_Declaration_Jeet_Patel_301573108.pdf)
+
 
 
 Project Overview:
