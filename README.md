@@ -12,7 +12,7 @@ AI Declaration Forms:
 
 [Jeet Patel](/ProjectMileston1_AI_Declaration_Jeet_Patel_301573108.pdf)
 
-
+[Aryaman Bahuguna](/P1_AI_Declaration_Aryaman_Bahuguna_301563474.pdf)
 
 Project Overview:
 MenuMap is a web application project that uses restaurant/dish curation and maps to empower people who may have felt restricted in their diets to expand and experience foreign cuisines and support businesses near them. 
