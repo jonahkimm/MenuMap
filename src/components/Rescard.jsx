@@ -15,7 +15,7 @@ constructor(props) {
 render(){
     return(
 
-    <div className = 'font-sans h-96  p-5 relative top-20 bg-gray-200'>
+    <div className = 'font-sans h-96 p-5 relative top-1 bg-gray-100 mb-2 border-4 border-gray-200 hover:border-pink-400'>
         
         <div id ="resname">
             <h1 className = 'text-xl font-bold absolute text-blue'>{this.props.name}</h1>

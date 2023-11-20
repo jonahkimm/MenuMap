@@ -1,11 +1,13 @@
 import Logo from '../assets/mappin.png'
 import Search from '../assets/search.png'
 import Profile from '../assets/testpic.jpg'
-
+import { useState } from 'react'
 
 const Navbar = () => {
+    const [searchParam, setSearchParam] = useState("");
+
     return (
-  
+      
       <div className="sticky">
         <div className="pt-0 pr-0 pb-0 pl-0 mt-0 mr-0 mb-0 ml-0"></div>
         <div className="bg-white">
@@ -26,8 +28,6 @@ const Navbar = () => {
                       </span>
                     </span>
                   </p>
-                  <input placeholder="Type to search" type="search" className="border border-gray-300 focus:ring-indigo-600
-                focus:border-indigo-600 sm:text-sm w-full rounded-lg pt-2 pb-2 pl-10 px-3 py-2"/>
                 </div>
                 <div className="md:space-x-6 justify-end items-center ml-auto flex space-x-3">
                   <div className="relative">
