@@ -35,7 +35,7 @@ const options = {
 
   useEffect(() => {
     fetchData();
-  }, []);
+  }, [fetchData]);
 
   const refetch = () => {
     setIsLoading(true);
