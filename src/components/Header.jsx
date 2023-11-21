@@ -2,10 +2,10 @@ import Logo from '../assets/mappin.png'
 import Search from '../assets/search.png'
 import Profile from '../assets/testpic.jpg'
 import { useState } from 'react'
+import useFetch from '../hooks/useFetch'
 
 const Navbar = () => {
     const [searchParam, setSearchParam] = useState("");
-
     return (
       
       <div className="sticky">
