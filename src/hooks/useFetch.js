@@ -12,7 +12,7 @@ const options = {
   url: `https://tasty.p.rapidapi.com/recipes/${endpoint}`,
   params: {...query},
   headers: {
-    'X-RapidAPI-Key': 'c88ea079e8mshb2b985d98730896p1c722bjsn4505e7f9c114',
+    'X-RapidAPI-Key': '3640661a74msh1232ac0f082655ap18f5cfjsn274fe3523a15',
     'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
   }
 };
@@ -35,6 +35,7 @@ const options = {
 
   useEffect(() => {
     fetchData();
+   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const refetch = () => {
