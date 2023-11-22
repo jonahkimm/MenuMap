@@ -5,9 +5,9 @@ import { useState } from 'react'
 import useFetch from '../hooks/useFetch'
 
 const Navbar = () => {
-    const [searchParam, setSearchParam] = useState("");
+const [searchParam, setSearchParam] = useState("");
     return (
-      
+
       <div className="sticky">
         <div className="pt-0 pr-0 pb-0 pl-0 mt-0 mr-0 mb-0 ml-0"></div>
         <div className="bg-white">

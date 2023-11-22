@@ -18,12 +18,13 @@ const restaurants = [
 //   p-5 bg-slate-900 top-0 left-64 overflow-auto
 const MiddleSearch = () => {
   const [searchParam, setSearchParam] = useState("");
+
   return (
     <div>
       <input placeholder="Type to search" type="search" onChange = {event => setSearchParam(event.target.value)} className="border border-gray-300 focus:ring-indigo-600
     focus:border-indigo-600 sm:text-sm w-full rounded-lg pt-2 pb-2 pl-10 px-3 py-2 lg:block mr-auto ml-40 hidden absolute top-3 max-w-xs"/>
 
-    <div className = "absolute h-5/6 w-2/5 top-20 left-64 overflow-auto ">
+    <div className = "absolute h-5/6 w-2/5 top-20 mr-0 ml-0 left-64 overflow-auto ">
     <p className='text-xl font-bold mb-4 mt-7'>Results for:</p>
     {
         restaurants.filter((restaurants)=> {
@@ -39,6 +40,7 @@ const MiddleSearch = () => {
         }).map((restaurants) => <Rescard name = {restaurants.name} location = {restaurants.location} cuisine = {restaurants.cuisine}
         price = {restaurants.price} reviews = {restaurants.reviews}/>)
     }
+  
     </div></div>
   )
 }
