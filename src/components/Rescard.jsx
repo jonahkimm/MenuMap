@@ -22,7 +22,7 @@ constructor(props) {
 render(){
 
     return(
-   
+
         <div className = 'font-sans h-96 relative top-1 mb-2'> 
         
     <div className = 'absolute h-full w-full bg-gray-100 border-4 border-gray-200 hover:border-pink-400'onClick = {() => this.setState({openResCard: true})} ></div>
