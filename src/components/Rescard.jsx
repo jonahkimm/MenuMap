@@ -23,23 +23,20 @@ render(){
 
     return(
    
-        <div>
-            
-        <div className = 'h-12 w-12 absolute bg-black'onClick = {() => this.setState({openResCard: true})}></div>
-        {createPortal (
-        <PopupInfo open = {this.state.openResCard} onClose = {()=>this.setState({openResCard: false})}/>, docBody
-        )};
+        <div className = 'font-sans h-96 relative top-1 mb-2'> 
         
-    <div className = 'font-sans h-96 p-5 relative top-1 bg-gray-100 mb-2 border-4 border-gray-200 hover:border-pink-400' >
-        
+    <div className = 'absolute h-full w-full bg-gray-100 border-4 border-gray-200 hover:border-pink-400'onClick = {() => this.setState({openResCard: true})} ></div>
+    {createPortal (
+        <PopupInfo restaurant = {{name: this.props.name, location: this.props.location, price: this.props.price, cuisine: this.props.cuisine, review: this.props.reviews}}open = {this.state.openResCard} onClose = {()=>this.setState({openResCard: false})}/>, docBody
+        )}
 
         <div id ="resname">
-            <h1 className = 'text-xl font-bold absolute'>{this.props.name}</h1>
+            <h1 className = 'text-xl font-bold absolute left-4 top-3'>{this.props.name}</h1>
         </div>
         
         <div id="location">
-        <img src = {pinImage} className = 'object-scale-down h-7 w-7 absolute right-32' alt = "Map Pin Icon"/>
-            <div className = "absolute right-5">{this.props.location}</div>
+        <img src = {pinImage} className = 'object-scale-down h-7 w-7 absolute right-32 top-4' alt = "Map Pin Icon"/>
+            <div className = "absolute right-5 top-4">{this.props.location}</div>
         </div>
         
         <div id="foodpic">
@@ -48,16 +45,15 @@ render(){
         
         <div id="price" className = "font-bold text-xl absolute right-10 top-12">{this.props.price}</div>
         
-        <div id="cuisine" className = "absolute top-10">{this.props.cuisine}</div>
+        <div id="cuisine" className = "absolute top-10 left-4">{this.props.cuisine}</div>
         
-        <div id="review" className = "absolute bottom-20">
+        <div id="review" className = "absolute bottom-20 left-4">
             <h1 className="font-bold">Reviews: </h1>
             <div>
                 <p>{this.props.reviews}</p>
             </div>
         </div>
         
-    </div>
     </div>
     );
    } 
