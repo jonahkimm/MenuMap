@@ -1,28 +1,31 @@
 import React from 'react'
 import Rescard from './Rescard'
 import { useState } from 'react'
-import useFetch from '../hooks/useFetch';
-
+import useSearch from '../hooks/useSearch';
 // MiddleSearch is a container for the dynamically generating ResCard items. Has a search bar and will allow for
 // scrolling to see more restaurant cards.
 
-//   p-5 bg-slate-900 top-0 left-64 overflow-auto
 const MiddleSearch = () => {
   const [searchParam, setSearchParam] = useState('');
-  const { data, refetch } = useFetch('auto-complete', { prefix: searchParam });  
 
+  const {data,refetch} = useSearch('search',
+  {
+    query: searchParam,
+    limit: '20',
+    zoom: '13',
+    language: 'en',
+    region: 'us'
+  },); 
   const handleKeyPress = (event) => {
     if(searchParam === '' && event.key==='Enter')
     {
       return;
     }
     if (event.key === 'Enter') {
-      // Trigger API request with the updated searchParam
       refetch();
     }
   };
-
-
+  console.log(data.data)
   return (
     <div>
       <input
@@ -36,15 +39,15 @@ const MiddleSearch = () => {
 
       <div className="absolute h-5/6 w-2/5 top-20 left-64 overflow-auto">
         <p className="text-xl font-bold mb-4 mt-7">Results for:</p>
-        {data.results &&
-          data.results.map((result, index) => (
+        {data.data &&
+          data.data.map((data, index) => (
             <Rescard
               key={index}
-              name={result.search_value}
-              location={result.search_value}
-              cuisine={result.search_value}
-              price={result.search_value}
-              reviews={result.search_value}
+              name={data.name}
+              location={data.street_address}
+              cuisine={data.subtypes[0]}
+              price={data.price_level}
+              reviews={data.rating}
             />
           ))}
       </div>
