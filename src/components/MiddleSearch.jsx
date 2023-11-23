@@ -16,6 +16,7 @@ const MiddleSearch = () => {
     language: 'en',
     region: 'us'
   },); 
+
   const handleKeyPress = (event) => {
     if(searchParam === '' && event.key==='Enter')
     {
@@ -25,6 +26,7 @@ const MiddleSearch = () => {
       refetch();
     }
   };
+  
   console.log(data.data)
   return (
     <div>
