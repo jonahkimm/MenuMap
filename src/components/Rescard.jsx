@@ -1,7 +1,5 @@
-import { render } from '@testing-library/react'
 import React from 'react'
 import PopupInfo from './PopupInfo'
-import { createPortal } from 'react-dom';
 
 
 var pinImage = require('../assets/mappin.png');
