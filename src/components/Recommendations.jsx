@@ -1,4 +1,9 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react'
+import RecommendCard from './RecommendCard';
+import useFetch from '../hooks/useFetch';
+
+// MiddleSearch is a container for the dynamically generating ResCard items. Has a search bar and will allow for
+// scrolling to see more restaurant cards.
 
 const checkboxOptions = [
   { label: 'Low Carb', value: 'low_carb', enables: '0' },
@@ -9,12 +14,20 @@ const checkboxOptions = [
   { label: 'No Nuts', value: 'no_nut', enables: '0' },
 ];
 
-const Sidebar = () => {
+//   p-5 bg-slate-900 top-0 left-64 overflow-auto
+const Recommendations = () => {
   const [searchParam, setSearchParam] = useState('');
   const [pushVal, setPushVal] = useState([]);
   const [enabledValues, setEnabledValues] = useState(
     Object.fromEntries(checkboxOptions.map((option) => [option.value, option.enables]))
   );
+  const generateString = () => {
+    const enabledValuesArray = Object.keys(enabledValues).filter((key) => enabledValues[key] === '1');
+    console.log(enabledValues);
+    return [...pushVal, ...enabledValuesArray].join(' ');
+  };
+
+  const {data,refetch} = useFetch('list',{size:'20', tags:generateString()})
 
   const handlePush = (newValue) => {
     setPushVal((prevValues) => [...prevValues, newValue]);
@@ -34,23 +47,35 @@ const Sidebar = () => {
       ...prevValues,
       [value]: prevValues[value] === '0' ? '1' : '0',
     }));
+    
   };
 
-  const generateString = () => {
-    const enabledValuesArray = Object.keys(enabledValues).filter((key) => enabledValues[key] === '1');
-    return [...pushVal, ...enabledValuesArray].join(' ');
-  };
 
   const handleInputConditions = () => {
     const generatedString = generateString();
     console.log('Generated String:', generatedString);
+    refetch();
     // Do whatever you want with the generated string
   };
 
-
+  console.log(data)
 
   return (
-    <div className="bg-white-200 p-4 w-64 ">
+    <div>
+    <div className = "absolute h-5/6 w-1/5 top-20 left-64 overflow-auto ">
+    <p className='text-xl font-bold mb-4 mt-7'>Recommendations:</p>
+    {data.results &&
+          data.results.map((result, index) => (
+            <RecommendCard
+              key={index}
+              name={result.name}
+              author={result.credits[0].name}
+              image={result.thumbnail_url}
+            />
+          ))}
+    </div>
+
+<div className="bg-white-200 p-4 w-64 ">
       <h2 className="text-l pt-10 font-bold mb-4">Categories</h2>
 
       <div className="flex items-center">
@@ -90,7 +115,8 @@ const Sidebar = () => {
         Input Conditions
       </button>
     </div>
-  );
-};
+    </div>
+  )
+}
 
-export default Sidebar;
+export default Recommendations
