@@ -40,6 +40,7 @@ const MiddleSearch = () => {
       <div className="absolute h-5/6 w-2/5 top-20 left-1/3 overflow-auto">
         <p className="text-xl font-bold mb-4 mt-7">Results for:</p>
         {data.data &&
+          data.data.filter((item) => item.photos_sample[0].photo_url !== null)&&
           data.data.map((data, index) => (
             <Rescard
               key={index}
@@ -48,6 +49,7 @@ const MiddleSearch = () => {
               cuisine={data.subtypes[0]}
               price={data.price_level}
               reviews={data.rating}
+              image={data.photos_sample[0].photo_url}
             />
           ))}
       </div>
