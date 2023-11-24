@@ -1,10 +1,9 @@
 import React from 'react'
-import useLocationFetch from '../hooks/useLocationFetch';
 
 var pinImage = require('../assets/mappin.png');
 
 const PopupInfo = ({open, onClose, restaurant}) => {
-const location = useLocationFetch();
+
 
 if(!open) return null;
   return (
