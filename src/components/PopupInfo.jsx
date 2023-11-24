@@ -1,15 +1,18 @@
 import React from 'react'
+import useLocationFetch from '../hooks/useLocationFetch';
 
 var pinImage = require('../assets/mappin.png');
 
 const PopupInfo = ({open, onClose, restaurant}) => {
+const location = useLocationFetch();
+
 if(!open) return null;
   return (
     <div data-testid = 'popup'>
-
+      
       {/* Overlay to darken the background */}
       <div className="fixed inset-0 bg-black opacity-50 z-40"></div>
-
+      
       {/* Popup */}
       <div className="fixed inset-0 flex items-center justify-center z-50">
         <div className="absolute w-2/3 h-2/3 rounded-xl bg-white text-gray-700 shadow-md">
@@ -40,7 +43,6 @@ if(!open) return null;
           >
            Close
         </button>
-        
     
           </div>
         </div>
