@@ -52,6 +52,9 @@ const MiddleSearch = () => {
               price={data.price_level}
               reviews={data.rating}
               image={data.photos_sample[0].photo_url}
+              phonenum ={data.phone_number}
+              description={data.about.summary}
+              website={data.website}
             />
           ))}
       </div>

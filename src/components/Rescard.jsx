@@ -16,15 +16,15 @@ export default class Rescard extends React.Component {
   }
 
   render() {
-    const { name, location, price, cuisine, reviews, image } = this.props;
+    const { name, location, price, cuisine, reviews, image, phonenum, description, website } = this.props;
 
     return (
 
       <div className='font-sans h-96 relative top-1 mb-2'>
-
+        
         <div data-testid='rescard' className='absolute h-full w-full bg-gray-100 border-4 border-gray-200 hover:border-pink-400' onClick={() => this.setState({ openResCard: true })} ></div>
         createPortal (
-        <PopupInfo restaurant={{ name: name, location: location, price: price, cuisine: cuisine, review: reviews }} open={this.state.openResCard} onClose={() => this.setState({ openResCard: false })} />, document.getElementById("overlay")
+        <PopupInfo restaurant={{ name: name, location: location, price: price, cuisine: cuisine, review: reviews, phonenum: phonenum, description: description, website: website, image:image}} open={this.state.openResCard} onClose={() => this.setState({ openResCard: false })} />, document.getElementById("overlay")
         )
 
         <div id="resname">
