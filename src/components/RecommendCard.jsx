@@ -20,14 +20,14 @@ export default class RecommendCard extends React.Component {
 
 
         <div id="resname">
-          <h1 className='xl:text-xl lg:text-sm top-2 font-semibold leading-snug absolute xl:left-36 lg:left-14 xl:pl-0 lg:pl-2'>{name}</h1>
+          <h1 className='xl:text-xl lg:text-sm top-2 sm:ml-2 font-semibold leading-snug absolute xl:left-36 lg:left-14 xl:pl-0 lg:pl-2'>{name}</h1>
         </div>
 
         <div id="foodpic">
           <img src={image} className='object-fill xl:h-3/4 w-2/5 lg:h-3/5 absolute top-2 ml-2 left-0 pr-7 rounded-lg'  alt={foodImage} />
         </div>
 
-        <div id="review" className="xl:text-xl lg:text-sm absolute xl:left-36 lg:left-14 xl:pl-0 lg:pl-2 top-24 flex">
+        <div id="review" className="xl:text-l lg:text-sm absolute xl:left-36 lg:left-14 xl:pl-0 lg:pl-2 top-24 flex">
           <h1 className="font-semibold leading-snug">Author: </h1>
           <div>
           <p className='font-light leading-snug'> {author !== null ? author : 'n/a'}</p>

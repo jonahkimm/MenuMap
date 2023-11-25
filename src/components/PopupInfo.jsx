@@ -27,7 +27,7 @@ if(!open) return null;
         <p className = "pl-6 block font-sans text-base font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased"> {restaurant.description}</p>
         <a href= {restaurant.website} className = "pl-6 block font-sans text-base font-bold leading-snug tracking-normal text-pink-700 antialiased">Restaurant Website</a>
         <p className = "pl-6 block font-sans text-base font-bold leading-snug tracking-normal text-blue-gray-900 antialiased">{restaurant.phonenum}</p>
-
+        
         <img
             src={restaurant.image}
             className="relative left-1/4 h-1/2 w-1/2 align-middle overflow-hidden rounded-xl  text-white shadow-lg shadow-gray"
