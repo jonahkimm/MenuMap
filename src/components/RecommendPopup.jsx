@@ -10,7 +10,7 @@ const RecommendPopup = ({ open, onClose, restaurant }) => {
             <div className="fixed inset-0 bg-black opacity-50 z-40"></div>
 
             {/* Popup */}
-            <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="fixed inset-0 flex items-center justify-center z-50 xl:scale-100 lg:scale-75">
                 <div className="absolute flex flex-col w-80 rounded-xl bg-white text-gray-700 shadow-md">
                     <img
                         src={restaurant.image}

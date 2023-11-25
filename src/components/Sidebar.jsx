@@ -50,7 +50,7 @@ const Sidebar = () => {
 
 
   return (
-    <div className="bg-white-200 p-4 w-64 ">
+    <div className="bg-white-200 p-4 xl:w-64 lg:w-32">
       <h2 className="text-l pt-10 font-bold mb-4">Categories</h2>
 
       <div className="flex items-center">

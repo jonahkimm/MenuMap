@@ -52,7 +52,7 @@ const Recommendations = () => {
 
   return (
     <div>
-      <div className="absolute h-5/6 w-1/5 top-20 left-64 overflow-auto ">
+      <div className="absolute h-5/6 w-1/5 top-20 xl:left-64 lg:left-40 overflow-auto ">
         <p className='text-xl font-bold mb-4 mt-7'>Recommendations:</p>
         {data.results && data.results.filter((item) => item.aspect_ratio === '1:1' && item.credits[0].name !== null) &&
           data.results.map((result, index) => (
@@ -67,14 +67,14 @@ const Recommendations = () => {
           ))}
       </div>
 
-      <div className="bg-white-200 p-4 w-64 ">
-        <h2 className="text-l pt-32 font-bold mb-4">Restrictions</h2>
+      <div className="bg-white-200 p-4 xl:w-64 lg:w-48">
+        <h2 className="text-l xl:pt-32 lg:pt-0 font-bold mb-4">Restrictions </h2>
 
         {checkboxOptions.map((option) => (
           <div key={option.value}>
             <label className="text-grey">
               <input
-                className="dark:border-white-400/20 mb-12 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-4 h-4"
+                className="dark:border-white-400/20 xl:mb-12 lg:mb-5 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-4 h-4"
                 type="checkbox"
                 onChange={() => handleCheckboxChange(option.value)}
                 checked={enabledValues[option.value] === '1'}

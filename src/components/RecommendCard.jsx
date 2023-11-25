@@ -15,19 +15,19 @@ export default class RecommendCard extends React.Component {
     const { name, author, image, nutrition, description } = this.props;
 
     return (
-      <div className='font-sans h-40 p-5 relative top-1 bg-gray-100 mb-2 ' >
+      <div className='font-sans h-40 p-5 relative top-1 bg-gray-100 mb-2 xl:ml-0 lg:ml-1' >
         <div data-testid='rescard' className='absolute rounded-lg left-0 top-0 p-5 h-40 w-full bg-rose-200 border-4 border-gray-200 hover:border-pink-400' onClick={() => this.setState({ openResCard: true })} >
 
 
         <div id="resname">
-          <h1 className='text-xl top-2 font-semibold leading-snug absolute text-blue left-36'>{name}</h1>
+          <h1 className='xl:text-xl lg:text-sm top-2 font-semibold leading-snug absolute xl:left-36 lg:left-14 xl:pl-0 lg:pl-2'>{name}</h1>
         </div>
 
         <div id="foodpic">
-          <img src={image} className='object-fill h-3/4 w-2/5 absolute top-2 ml-2 left-0 pr-7 rounded-lg'  alt={foodImage} />
+          <img src={image} className='object-fill xl:h-3/4 w-2/5 lg:h-3/5 absolute top-2 ml-2 left-0 pr-7 rounded-lg'  alt={foodImage} />
         </div>
 
-        <div id="review" className="absolute left-36 top-24 flex">
+        <div id="review" className="xl:text-xl lg:text-sm absolute xl:left-36 lg:left-14 xl:pl-0 lg:pl-2 top-24 flex">
           <h1 className="font-semibold leading-snug">Author: </h1>
           <div>
           <p className='font-light leading-snug'> {author !== null ? author : 'n/a'}</p>
