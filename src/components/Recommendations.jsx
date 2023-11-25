@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import RecommendCard from './RecommendCard';
 import useFetch from '../hooks/useFetch';
 
@@ -29,7 +29,7 @@ const Recommendations = () => {
     return [...enabledValuesArray].join(' ');
   };
 
-  const {data,refetch} = useFetch('list',{size:'20', tags:generateString()})
+  const { data, refetch } = useFetch('list', { size: '20', tags: generateString() })
 
 
   const handleCheckboxChange = (value) => {
@@ -37,7 +37,7 @@ const Recommendations = () => {
       ...prevValues,
       [value]: prevValues[value] === '0' ? '1' : '0',
     }));
-    
+
   };
 
 
@@ -52,9 +52,9 @@ const Recommendations = () => {
 
   return (
     <div>
-    <div className = "absolute h-5/6 w-1/5 top-20 left-64 overflow-auto ">
-    <p className='text-xl font-bold mb-4 mt-7'>Recommendations:</p>
-    {data.results && data.results.filter((item) => item.aspect_ratio === '1:1' && item.credits[0].name !== null) &&
+      <div className="absolute h-5/6 w-1/5 top-20 left-64 overflow-auto ">
+        <p className='text-xl font-bold mb-4 mt-7'>Recommendations:</p>
+        {data.results && data.results.filter((item) => item.aspect_ratio === '1:1' && item.credits[0].name !== null) &&
           data.results.map((result, index) => (
             <RecommendCard
               key={index}
@@ -65,32 +65,32 @@ const Recommendations = () => {
               description={result.description}
             />
           ))}
-    </div>
+      </div>
 
-<div className="bg-white-200 p-4 w-64 ">
-      <h2 className="text-l pt-32 font-bold mb-4">Restrictions</h2>
+      <div className="bg-white-200 p-4 w-64 ">
+        <h2 className="text-l pt-32 font-bold mb-4">Restrictions</h2>
 
-      {checkboxOptions.map((option) => (
-        <div key={option.value}>
-          <label className="text-grey">
-            <input
-              className="dark:border-white-400/20 mb-12 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-4 h-4"
-              type="checkbox"
-              onChange={() => handleCheckboxChange(option.value)}
-              checked={enabledValues[option.value] === '1'}
-            />{' '}
-            {option.label}
-          </label>
-        </div>
-      ))}
+        {checkboxOptions.map((option) => (
+          <div key={option.value}>
+            <label className="text-grey">
+              <input
+                className="dark:border-white-400/20 mb-12 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-4 h-4"
+                type="checkbox"
+                onChange={() => handleCheckboxChange(option.value)}
+                checked={enabledValues[option.value] === '1'}
+              />{' '}
+              {option.label}
+            </label>
+          </div>
+        ))}
 
-      <button
-        className="border rounded-lg p-3 bg-pink-400 text-neutral-100 hover:scale-100"
-        onClick={handleInputConditions}
-      >
-        Input Conditions
-      </button>
-    </div>
+        <button
+          className="border rounded-lg p-3 bg-pink-400 text-neutral-100 hover:scale-100"
+          onClick={handleInputConditions}
+        >
+          Input Conditions
+        </button>
+      </div>
     </div>
   )
 }
