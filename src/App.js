@@ -1,8 +1,7 @@
 import React from 'react'
 import Header from './components/Header.jsx'
-import EmbededMap from './components/EmbededMap.jsx';
 import Container from './components/Container.jsx';
-
+import Map from './components/Map.jsx'
 
 function App() {
 
@@ -10,7 +9,7 @@ function App() {
     <div className="App">
       <Header />
       <Container/>
-      <EmbededMap />
+      <Map/>
     </div>
 
   );
