@@ -5,9 +5,18 @@ import useLocationFetch from '../hooks/useLocationFetch';
 
 const MiddleSearch = () => {
   const location = useLocationFetch();
-  const userLatitude = Number(location.userLocation.coordinates.latitude);
-  const userLongitude = Number(location.userLocation.coordinates.longitude);
-  
+  var userLatitude, userLongitude;
+
+  if(location.userLocation.loadedin)
+  {
+  userLatitude = Number(location.userLocation.coordinates.latitude);
+  userLongitude = Number(location.userLocation.coordinates.longitude);
+  }
+  else {
+  userLatitude = 49.27855565599999;
+  userLongitude = -122.91953997726202;
+  }
+
   const [searchParam, setSearchParam] = useState('');
   const [isVisible, setIsVisible] = useState(true);
   const { data, refetch } = useSearch('search', {

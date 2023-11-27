@@ -1,4 +1,5 @@
 import { useState, useEffect} from "react";
+import Geolocation from "@react-native-community/geolocation";
 
 const useLocationFetch = () => {
 const [userLocation, setUserLocation] = useState(
@@ -31,7 +32,7 @@ const onretrieveLocation = (userLocation) => {
 useEffect(()=>{
     if(!("geolocation" in navigator))
     onError();
-
+    else
     navigator.geolocation.getCurrentPosition(onretrieveLocation, onError);
 },[]);;
 
