@@ -1,14 +1,30 @@
 import React, { useState, useEffect } from 'react';
 import Rescard from './Rescard';
 import useSearch from '../hooks/useSearch';
+import useLocationFetch from '../hooks/useLocationFetch';
 
 const MiddleSearch = () => {
+  const location = useLocationFetch();
+  var userLatitude, userLongitude;
+
+  if(location.userLocation.loadedin)
+  {
+  userLatitude = Number(location.userLocation.coordinates.latitude);
+  userLongitude = Number(location.userLocation.coordinates.longitude);
+  }
+  else {
+  userLatitude = 49.27855565599999;
+  userLongitude = -122.91953997726202;
+  }
+
   const [searchParam, setSearchParam] = useState('');
   const [isVisible, setIsVisible] = useState(true);
   const { data, refetch } = useSearch('search', {
     query: searchParam,
     limit: '20',
     zoom: '13',
+    lat: userLatitude,
+    lng: userLongitude,
     language: 'en',
     region: 'us',
   });

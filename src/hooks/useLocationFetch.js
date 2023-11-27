@@ -31,7 +31,7 @@ const onretrieveLocation = (userLocation) => {
 useEffect(()=>{
     if(!("geolocation" in navigator))
     onError();
-
+    else
     navigator.geolocation.getCurrentPosition(onretrieveLocation, onError);
 },[]);;
 
