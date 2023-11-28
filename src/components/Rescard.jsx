@@ -25,27 +25,24 @@ export default class Rescard extends React.Component {
         <div data-testid='rescard' className='absolute xl:h-96 lg:h-80 w-full bg-gray-100 border-4 border-gray-200 hover:border-pink-400' onClick={() => this.setState({ openResCard: true })} ></div>
 
         <div id="resname">
-          <h1 className='xl:text-xl lg:text-lg font-bold absolute left-4 top-3'>{name}</h1>
+          <h1 className='xl:text-xl lg:text-lg font-bold absolute left-4 top-3 inline-block'>{name}</h1>
         </div>
 
         <div id="location">
-          <img src={pinImage} alt="pinImage" className='object-scale-down h-7 w-7 absolute right-32 top-4' />
-          <div className="absolute right-5 top-4">{location}</div>
+          <img src={pinImage} alt="pinImage" className='object-scale-down h-7 w-7 relative left-4 top-14 inline-block' />
+          <div className="relative inline-block left-6 top-16 overflow-hidden">{location}</div>
         </div>
 
         <div id="foodpic">
-          <img src={image} className='object-scale-down h-2/5 w-2/5 absolute top-24' alt="Food" />
+          <img src={image} className='object-scale-down h-3/5 w-3/5 relative inline-block top-16 pl-3 mb-1' alt="Food" />
         </div>
-
-        <div id="price" className="font-bold xl:text-xl lg:text-lg absolute right-10 top-12">{price}</div>
+        
+        <div id="price" className="font-bold xl:text-xl lg:text-lg absolute right-8 top-4">{price}</div>
 
         <div id="cuisine" className="absolute top-10 left-4 xl:text-base lg:text-sm">{cuisine}</div>
 
-        <div id="review" className="absolute xl:bottom-20 lg: bottom-10 left-4 ">
-          <h1 className="font-bold">Reviews: </h1>
-          <div>
-            <p>{reviews}☆</p>
-          </div>
+        <div id="review" className="absolute xl:bottom-20 lg:bottom-2 left-4 ">
+          <h1 className="font-bold">Rating: {reviews}☆</h1>
         </div>
 
         createPortal (

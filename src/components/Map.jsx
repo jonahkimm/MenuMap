@@ -22,7 +22,7 @@ export default function Intro()
    
     const position = {lat:userLatitude,lng:userLongitude}
     return (
-        <APIProvider apiKey="////AIzaSyAIi0GfFZUi95zJ-QQtMe_RY1nZgEcUDhc">
+        <APIProvider apiKey="///AIzaSyAIi0GfFZUi95zJ-QQtMe_RY1nZgEcUDhc">
             <div>
                 <Map zoom={15} center={position} style={style}></Map>  
             </div>
