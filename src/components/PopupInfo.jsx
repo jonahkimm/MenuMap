@@ -19,8 +19,8 @@ if(!open) return null;
         <div className = "font-sans">
         <h5 className = "pl-6 pt-6 pr-6 inline-block text-4xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased"> {restaurant.name}</h5>
         <h6 className = "inline-block font-thin text-4xl leading-snug tracking-normal text-blue-gray-900 antialiased ">{restaurant.review}☆</h6>
-        <img src={pinImage} alt="pinImage" className='relative object-scale-down h-9 w-9 inline-block -top-2 left-80' />
-        <h6 className = "relative inline-block font-thin text-2xl leading-snug tracking-normal text-blue-gray-900 antialiased -top-2 left-80">{restaurant.location}</h6>
+        <img src={pinImage} alt="pinImage" className='object-scale-down h-9 w-9 absolute top-8 right-40' />
+        <h6 className = "absolute font-thin text-2xl leading-snug tracking-normal text-blue-gray-900 antialiased top-8 right-0 overflow-hidden">{restaurant.location}</h6>
         </div>
 
         <p className = "pl-6 block font-sans text-xl font-bold leading-snug tracking-normal text-blue-gray-900 antialiased"> {restaurant.cuisine}</p>
