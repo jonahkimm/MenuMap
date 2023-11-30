@@ -1,21 +1,19 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const checkboxOptions = [
-  { label: "Low Carb", value: "low_carb", enables: "0" },
-  { label: "Vegetarian/Vegan", value: "vegetarian", enables: "0" },
-  { label: "Vegan", value: "vegan", enables: "0" },
-  { label: "Lactose Intolerant", value: "lactose_intolerant", enables: "0" },
-  { label: "Keto", value: "keto", enables: "0" },
-  { label: "No Nuts", value: "no_nut", enables: "0" },
+  { label: 'Low Carb', value: 'low_carb', enables: '0' },
+  { label: 'Vegetarian/Vegan', value: 'vegetarian', enables: '0' },
+  { label: 'Vegan', value: 'vegan', enables: '0' },
+  { label: 'Lactose Intolerant', value: 'lactose_intolerant', enables: '0' },
+  { label: 'Keto', value: 'keto', enables: '0' },
+  { label: 'No Nuts', value: 'no_nut', enables: '0' },
 ];
 
 const Sidebar = () => {
-  const [searchParam, setSearchParam] = useState("");
+  const [searchParam, setSearchParam] = useState('');
   const [pushVal, setPushVal] = useState([]);
   const [enabledValues, setEnabledValues] = useState(
-    Object.fromEntries(
-      checkboxOptions.map((option) => [option.value, option.enables])
-    )
+    Object.fromEntries(checkboxOptions.map((option) => [option.value, option.enables]))
   );
 
   const handlePush = (newValue) => {
@@ -23,10 +21,10 @@ const Sidebar = () => {
   };
 
   const handleKeyPress = (event) => {
-    if (searchParam === "" && event.key === "Enter") {
+    if (searchParam === '' && event.key === 'Enter') {
       return;
     }
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       handlePush(searchParam);
     }
   };
@@ -34,22 +32,25 @@ const Sidebar = () => {
   const handleCheckboxChange = (value) => {
     setEnabledValues((prevValues) => ({
       ...prevValues,
-      [value]: prevValues[value] === "0" ? "1" : "0",
+      [value]: prevValues[value] === '0' ? '1' : '0',
     }));
   };
 
   const generateString = () => {
-    const enabledValuesArray = Object.keys(enabledValues).filter(
-      (key) => enabledValues[key] === "1"
-    );
-    return [...pushVal, ...enabledValuesArray].join(" ");
+    const enabledValuesArray = Object.keys(enabledValues).filter((key) => enabledValues[key] === '1');
+    return [...pushVal, ...enabledValuesArray].join(' ');
   };
 
   const handleInputConditions = () => {
     const generatedString = generateString();
-    console.log("Generated String:", generatedString);
+    console.log('Generated String:', generatedString);
     // Do whatever you want with the generated string
   };
+
+  const handlePush = (newValue) => {
+    setPushVal((prevValues) => [...prevValues, newValue]);
+  };
+
 
   return (
     <div className="bg-white-200 p-4 xl:w-64 lg:w-32">
@@ -78,8 +79,8 @@ const Sidebar = () => {
               className="dark:border-white-400/20 mb-12 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-4 h-4"
               type="checkbox"
               onChange={() => handleCheckboxChange(option.value)}
-              checked={enabledValues[option.value] === "1"}
-            />{" "}
+              checked={enabledValues[option.value] === '1'}
+            />{' '}
             {option.label}
           </label>
         </div>

@@ -1,37 +1,39 @@
-import React, { useState, useEffect } from "react";
-import Rescard from "./Rescard";
-import useSearch from "../hooks/useSearch";
-import useLocationFetch from "../hooks/useLocationFetch";
+import React, { useState, useEffect } from 'react';
+import Rescard from './Rescard';
+import useSearch from '../hooks/useSearch';
+import useLocationFetch from '../hooks/useLocationFetch';
 
 const MiddleSearch = () => {
   const location = useLocationFetch();
   var userLatitude, userLongitude;
 
-  if (location.userLocation.loadedin) {
-    userLatitude = Number(location.userLocation.coordinates.latitude);
-    userLongitude = Number(location.userLocation.coordinates.longitude);
-  } else {
-    userLatitude = 49.27855565599999;
-    userLongitude = -122.91953997726202;
+  if(location.userLocation.loadedin)
+  {
+  userLatitude = Number(location.userLocation.coordinates.latitude);
+  userLongitude = Number(location.userLocation.coordinates.longitude);
+  }
+  else {
+  userLatitude = 49.27855565599999;
+  userLongitude = -122.91953997726202;
   }
 
-  const [searchParam, setSearchParam] = useState("");
+  const [searchParam, setSearchParam] = useState('');
   const [isVisible, setIsVisible] = useState(true);
-  const { data, refetch } = useSearch("search", {
+  const { data, refetch } = useSearch('search', {
     query: searchParam,
-    limit: "20",
-    zoom: "13",
+    limit: '20',
+    zoom: '13',
     lat: userLatitude,
     lng: userLongitude,
-    language: "en",
-    region: "us",
+    language: 'en',
+    region: 'us',
   });
 
   const handleKeyPress = (event) => {
-    if (searchParam === "" && event.key === "Enter") {
+    if (searchParam === '' && event.key === 'Enter') {
       return;
     }
-    if (event.key === "Enter") {
+    if (event.key === 'Enter') {
       refetch();
     }
   };
@@ -39,17 +41,17 @@ const MiddleSearch = () => {
   useEffect(() => {
     const handleResize = () => {
       const windowHeight = window.innerHeight;
-      const halfWindowHeight = windowHeight / 2;
+      const halfWindowHeight = windowHeight/2;
 
       setIsVisible(windowHeight > halfWindowHeight);
     };
 
     handleResize(); // Initial check
 
-    window.addEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener("resize", handleResize);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 

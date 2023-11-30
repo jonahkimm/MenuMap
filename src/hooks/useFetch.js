@@ -12,7 +12,7 @@ const options = {
   url: `https://tasty.p.rapidapi.com/recipes/${endpoint}`,
   params: {...query},
   headers: {
-    'X-RapidAPI-Key': '3640661a74msh1232ac0f082655ap18f5cfjsn274fe3523a15',
+    'X-RapidAPI-Key': '///3640661a74msh1232ac0f082655ap18f5cfjsn274fe3523a15',
     'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
   }
 };

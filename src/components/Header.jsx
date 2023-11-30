@@ -1,6 +1,6 @@
-import Logo from "../assets/mappin.png";
-import Search from "../assets/search.png";
-import Profile from "../assets/testpic.jpg";
+import Logo from '../assets/mappin.png';
+import Search from '../assets/search.png';
+import Profile from '../assets/testpic.jpg';
 
 const Navbar = () => {
   //const [searchParam, setSearchParam] = useState("");
@@ -14,7 +14,7 @@ const Navbar = () => {
               <div>
                 <img src={Logo} className="block btn- h-8 w-auto" alt="Logo" />
               </div>
-              <p className="ml-10 text-xl">MenuMap</p>
+              <p className='ml-10 text-xl'>MenuMap</p>
               <div className="lg:block mr-auto ml-40 hidden relative max-w-xs">
                 <p className="pl-3 items-center flex absolute inset-y-0 left-0 pointer-events-none">
                   <span className="justify-center items-center flex">
