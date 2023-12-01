@@ -42,13 +42,10 @@ const Recommendations = () => {
 
 
   const handleInputConditions = () => {
-    const generatedString = generateString();
-    console.log('Generated String:', generatedString);
     refetch();
     // Do whatever you want with the generated string
   };
 
-  console.log(data)
 
   return (
     <div className='grid grid-cols-4'>
