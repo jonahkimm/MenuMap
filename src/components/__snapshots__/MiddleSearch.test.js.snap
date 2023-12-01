@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MiddleSearch Component renders correctly with data 1`] = `
+<MiddleSearch
+  newData={
+    Object {
+      "data": Array [
+        Object {
+          "about": Object {
+            "summary": "About restaurant 1",
+          },
+          "name": "Restaurant 1",
+          "phone_number": "123-456-7890",
+          "photos_sample": Array [
+            Object {
+              "photo_url": "image_url_1",
+            },
+          ],
+          "price_level": "$$$",
+          "rating": 4.5,
+          "street_address": "123 Main St",
+          "subtypes": Array [
+            "Cuisine1",
+          ],
+          "website": "http://restaurant1.com",
+        },
+      ],
+    }
+  }
+/>
+`;
+
+exports[`MiddleSearch Component renders correctly with empty data 1`] = `
+<MiddleSearch
+  newData={
+    Object {
+      "data": Array [],
+    }
+  }
+/>
+`;
