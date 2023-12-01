@@ -26,7 +26,7 @@ export default function EmbededMap() {
     }
 
     return (
-    <APIProvider apiKey="AIzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k"> 
+    <APIProvider apiKey="///AIzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k"> 
 
         <div style={{height: "100vh", width: "100%"}}> 
             <Map zoom={9} center={position} mapId="30c45397d92e6144" style={style} >
