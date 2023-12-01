@@ -14,4 +14,4 @@ const EmbededMap = () => {
     )
 }
 
-export default EmbededMap
+export default EmbededMap;
