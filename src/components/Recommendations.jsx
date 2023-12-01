@@ -9,7 +9,7 @@ const checkboxOptions = [
   { label: 'Low Calorie', value: 'low_calorie', enables: '0' },
   { label: 'Low Fat', value: 'low_fat', enables: '0' },
   { label: 'Vegan', value: 'vegan', enables: '0' },
-  { label: 'Lactose Intolerant', value: 'dairy_free', enables: '0' },
+  { label: 'Lactose', value: 'dairy_free', enables: '0' },
   { label: 'Gluten Free', value: 'gluten_free', enables: '0' },
   { label: 'Breakfast', value: 'breakfast', enables: '0' },
   { label: 'Lunch', value: 'lunch', enables: '0' },
@@ -51,24 +51,10 @@ const Recommendations = () => {
   console.log(data)
 
   return (
-    <div>
-      <div className="absolute h-5/6 w-1/5 top-20 xl:left-64 lg:left-40 overflow-auto ">
-        <p className='text-xl font-bold mb-4 mt-7'>Recommendations:</p>
-        {data.results && data.results.filter((item) => item.aspect_ratio === '1:1' && item.credits[0].name !== null) &&
-          data.results.map((result, index) => (
-            <RecommendCard
-              key={index}
-              name={result.name}
-              author={result.credits[0].name}
-              image={result.thumbnail_url}
-              nutrition={result.nutrition}
-              description={result.description}
-            />
-          ))}
-      </div>
+    <div className='grid grid-cols-4'>
 
-      <div className="bg-white-200 p-4 xl:w-64 lg:w-48">
-        <h2 className="text-l xl:pt-32 lg:pt-0 font-bold mb-4">Restrictions </h2>
+      <div className="bg-white-200 p-4">
+        <h2 className="text-l xl:pt-4 lg:pt-0 font-bold mb-4">Restrictions </h2>
 
         {checkboxOptions.map((option) => (
           <div key={option.value}>
@@ -91,6 +77,25 @@ const Recommendations = () => {
           Input Conditions
         </button>
       </div>
+      <div className="col-span-3">
+      <p className='text-xl font-bold mb-4 mt-7'>Recommendations:</p>
+
+      <div className="scrollable-container" style={{ maxHeight: '800px', overflowY: 'auto' }}>
+        {data.results && data.results
+          .filter((item) => item.aspect_ratio === '1:1' && item.credits[0].name !== null)
+          .map((result, index) => (
+            <RecommendCard
+              key={index}
+              name={result.name}
+              author={result.credits[0].name}
+              image={result.thumbnail_url}
+              nutrition={result.nutrition}
+              description={result.description}
+            />
+          ))}
+      </div>
+    </div>
+
     </div>
   )
 }
