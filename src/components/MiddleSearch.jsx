@@ -1,79 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Rescard from './Rescard';
-import useSearch from '../hooks/useSearch';
-import useLocationFetch from '../hooks/useLocationFetch';
 
-const MiddleSearch = () => {
-  const location = useLocationFetch();
-  var userLatitude, userLongitude;
-
-  if(location.userLocation.loadedin)
-  {
-  userLatitude = Number(location.userLocation.coordinates.latitude);
-  userLongitude = Number(location.userLocation.coordinates.longitude);
-  }
-  else {
-  userLatitude = 49.27855565599999;
-  userLongitude = -122.91953997726202;
-  }
-
-  const [searchParam, setSearchParam] = useState('');
-  const [isVisible, setIsVisible] = useState(true);
-  const { data, refetch } = useSearch('search', {
-    query: searchParam,
-    limit: '20',
-    zoom: '13',
-    lat: userLatitude,
-    lng: userLongitude,
-    language: 'en',
-    region: 'us',
-  });
-
-  const handleKeyPress = (event) => {
-    if (searchParam === '' && event.key === 'Enter') {
-      return;
-    }
-    if (event.key === 'Enter') {
-      refetch();
-    }
-  };
-
-  useEffect(() => {
-    const handleResize = () => {
-      const windowHeight = window.innerHeight;
-      const halfWindowHeight = windowHeight/2;
-
-      setIsVisible(windowHeight > halfWindowHeight);
-    };
-
-    handleResize(); // Initial check
-
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  if (!isVisible) {
-    return null; // Render nothing if not visible
-  }
-
+const MiddleSearch = ({newData}) => {
   return (
     <div className='grid grid-col-2'>
-      <input
-        placeholder="Type to search"
-        type="search"
-        value={searchParam}
-        onChange={(event) => setSearchParam(event.target.value)}
-        onKeyPress={handleKeyPress}
-        className="border border-gray-300 focus:ring-indigo-600 focus:border-indigo-600 sm:text-sm w-full rounded-lg pt-2 pb-2 pl-10 px-3 py-2 lg:block hidden absolute top-3 max-w-xs"
-      />
       <p className="text-xl font-bold ml-6 mb-4 mt-7">Results for:</p>
 
       <div className="scrollable-container" style={{ maxHeight: '800px', overflowY: 'auto' }}>
-        {data.data &&
-          data.data
+        {newData.data &&
+          newData.data
             .filter((item) => item.photos_sample[0].photo_url !== null)
             .map((data, index) => (
               <Rescard
