@@ -72,7 +72,7 @@ const ContainerGrid = () => {
       <div className="grid grid-cols-3">
         <Recommendations />
         <MiddleSearch newData={data}/>
-        <Map />
+        <Map newData={data}/>
       </div>
     </div>
 
