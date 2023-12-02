@@ -25,9 +25,6 @@ const EmbededMap = ({ newData }) => {
     
     const[open, setOpen] = useState(false);
 
-
-    const [open, setOpen] = useState(false);
-
     const style = {
         height: '100%',
         width: '33%',
