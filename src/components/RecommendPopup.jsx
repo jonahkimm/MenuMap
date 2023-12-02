@@ -3,8 +3,9 @@ import { createPortal } from 'react-dom';
 import { Context } from './Context';
 
 const RecommendPopup = ({ open, onClose, restaurant }) => {
+    /* eslint-disable no-unused-vars */
     const {resoSearch, setResoSearch} = useContext(Context);
-
+    /* eslint-disable no-unused-vars */
     if (!open) return null;
 
     return createPortal(

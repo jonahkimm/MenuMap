@@ -41,7 +41,7 @@ const ContainerGrid = () => {
     language: 'en',
     region: 'us',
   });
-
+/* eslint-disable */
   useEffect(()=>{
     if(resoSearch.cuisine !== '' && resoSearch.inquire)
     {
@@ -54,11 +54,11 @@ const ContainerGrid = () => {
         cuisine: '',
         inquire: false
       });
-      console.log(JSON.stringify(data));
+    
     }
     refetch();
   },[resoSearch.inquire])
-
+/* eslint-enable */
   return (
     <div>
       <input
