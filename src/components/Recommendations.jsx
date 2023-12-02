@@ -90,6 +90,7 @@ const Recommendations = () => {
               author={result.credits[0].name}
               image={result.thumbnail_url}
               nutrition={result.nutrition}
+              cuisine={result.tags[0].name}
               description={result.description}
             />
           ))}
