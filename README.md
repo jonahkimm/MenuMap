@@ -5,48 +5,53 @@
 ![Licence](https://img.shields.io/badge/Licence-MIT-green)
 
 # <img src=./src/assets/mappin.png width="40" height="40">MenuMap
-<span style="color:red">**MenuMaps**</span> is a web application project that uses restaurant/dish curation and maps to empower people who may have felt restricted in their diets to expand and experience foreign cuisines and support businesses near them. 
+<span style="color:red">**MenuMap**</span> is a web application project that uses restaurant/dish🍔 curation and maps🗺️ to empower people who may have felt restricted in their diets to expand and experience foreign cuisines and support businesses near them📈. 
 
-MenuMap caters to a diverse user base, from students on a budget to adventurous eaters looking for a great recommendation. The app will take inputs from the user such as desired price range, type of cuisine and dietary restrictions to filter nearby restaurants and display the choices on an interactive map.
+MenuMap caters to a diverse user base, from students👩🏻‍🎓 on a budget to adventurous eaters looking for a great recommendation. The app will take inputs🔤 from the user such as desired price range, type of cuisine and dietary restrictions to filter nearby restaurants and display the choices on an interactive map📍.
 
 ## Contents
 1. [Tech Stack](#tech-stack)
-2. 
-3. 
-4. 
-6. [Acknowledgements](#acknowledgements)
+2. [Application Features](#application-features)
+3. [Licence](#licence)
+3. [Acknowledgements](#acknowledgements)
 
 ## Tech Stack
 
 [![HTML][HTML5]][HTML-url]  
-Self-explanatory
+HTML is the backbone of the web, providing a standardized markup language understood by all browsers. Its structured approach enhances accessibility, SEO, and content readability. We have used it to construct the body of our application.
 
 [![CSS][CSS]][CSS-url]  
-We can simply embed tailwind components into HTML classes; no need to spend time writing CSS. Tailwind also provides consistency in terms of visual design.
+Tailwind CSS utilizes a utility-first methodology, allowing for rapid development by applying small, single-purpose classes directly in the HTML. This approach speeds up the styling process and encourages consistency.
 
 [![React][React.js]][React-url]  
-Collectively, we are most familiar with React. It is also an industry staple, therefore it is good to practice. React also has a lot of support in the open-source market.
+React.js follows a component-based architecture, allowing developers to build UIs by breaking them down into reusable components. This modularity enhances code reusability, maintainability, and scalability. Collectively, we are most familiar with React. It is also an industry staple thus, has a lot of support in the open-source market as well.
 
 [![Jest][Jest]][Jest-url]  
-something
+Jest is known for its simplicity and ease of adoption. It comes with an intuitive API that allows developers to write tests quickly and efficiently. Jest supports different types of tests, including unit, integration, and end-to-end tests. Its versatility allows for comprehensive test coverage across the application stack. It was also suggested to us by our instructor taking into account our overall tech stack and hence, we decided to use it.
 
 [![GithubActions][GitHubActions]][GitHubActions-url]  
-Github Actions Reason: We plan on hosting on Github Pages, so for simplicity we want to avoid diverging away from a CI/CD platform away from Github.
+GitHub Actions automates various workflows, including continuous integration and deployment. It allows you to build, test, and deploy code automatically, streamlining the development pipeline. As GitHub's native CI/CD solution, GitHub Actions seamlessly integrates with repositories and pull requests.
 
 [![Netlify][Netlify]][Netlify-url]  
-something
+Netlify simplifies the deployment process by providing an intuitive interface where developers can easily deploy static sites or applications directly from their Git repositories. Continuous deployment is automated, triggered by repository updates. Moreover, we decided to use it since it's free.
+
+## Application Features
+
+
+## Licence
+Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
 
 ## Acknowledgements
 
-#### 1. AI Declaration Forms
-[Jonah Kim](/ProjectMileston1_AI_Declaration_Jonah_Kim_301395290.pdf)  
-[Aarham Haider](/ProjectMileston1_AI_Declaration_Aarham_Haider_301462422.pdf)  
-[Jeet Patel](/ProjectMileston1_AI_Declaration_Jeet_Patel_301573108.pdf)  
-[Aryaman Bahuguna](/P1_AI_Declaration_Aryaman_Bahuguna_301563474.pdf)
+1. AI Declaration Forms  
+[Jonah Kim](./Milestone1AIDisclosure/ProjectMileston1_AI_Declaration_Jonah_Kim_301395290.pdf)  
+[Aarham Haider](./Milestone1AIDisclosure/ProjectMileston1_AI_Declaration_Aarham_Haider_301462422.pdf)  
+[Jeet Patel](./Milestone1AIDisclosure/ProjectMileston1_AI_Declaration_Jeet_Patel_301573108.pdf)  
+[Aryaman Bahuguna](./Milestone1AIDisclosure/P1_AI_Declaration_Aryaman_Bahuguna_301563474.pdf)
 
-#### 2. Resources
-
-
+2. Resources  
+[Youtube](https://www.youtube.com/watch?v=PfZ4oLftItk&list=PL2rFahu9sLJ2QuJaKKYDaJp0YqjFCDCtN)  
+[Documentation]()
 
 
 <!-- Links  -->
