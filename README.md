@@ -37,6 +37,25 @@ Netlify simplifies the deployment process by providing an intuitive interface wh
 
 ## Application Features
 
+1. **Filtering**  
+preset options to filter on the basis of dietary restrictions, allergies, health stats and display recommendations  
+![Filtering GIF](./src/assets/filtering.gif)
+
+2. **Dish Recommendations**  
+this feature is especially curated for adventurous eaters ;)
+![Recommendations](./src/assets/recommendations.png)
+
+3. **Dish Explanations**  
+displays a short summary of what the dish is and some health stats
+![Explanation](./src/assets/explanation.gif)
+
+4. **Nearby Restaurants**  
+pins nearby restaurants on a map with a brief summary of what they offer
+![nearby](./src/assets/nearby.gif)
+
+5. **Restaurant Info**  
+provides a link to restaurant website, their contact number & many more :)
+![Information](./src/assets/info.gif)
 
 ## Licence
 Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
@@ -50,8 +69,8 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for more information
 [Aryaman Bahuguna](./Milestone1AIDisclosure/P1_AI_Declaration_Aryaman_Bahuguna_301563474.pdf)
 
 2. Resources  
+[Documentation](https://visgl.github.io/react-google-maps/docs/get-started)  
 [Youtube](https://www.youtube.com/watch?v=PfZ4oLftItk&list=PL2rFahu9sLJ2QuJaKKYDaJp0YqjFCDCtN)  
-[Documentation]()
 
 
 <!-- Links  -->
