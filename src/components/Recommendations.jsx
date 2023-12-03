@@ -50,7 +50,7 @@ const Recommendations = () => {
   return (
     <div className='grid grid-cols-4'>
 
-      <div className="bg-white-200 p-4">
+      <div className="bg-white-200 p-4 col-span-1">
         <h2 className="text-l xl:pt-4 lg:pt-0 font-bold mb-4">Restrictions </h2>
 
         {checkboxOptions.map((option) => (
@@ -71,15 +71,22 @@ const Recommendations = () => {
           className="border rounded-lg p-3 bg-pink-400 text-neutral-100 hover:scale-100"
           onClick={handleInputConditions}
         >
-          Input Conditions
+          Input
         </button>
       </div>
       <div className="col-span-3">
       <p className='text-xl font-bold mb-4 mt-7'>Recommendations:</p>
 
-      <div className="scrollable-container" style={{ maxHeight: '800px', overflowY: 'auto' }}>
+      <div className="scrollable-container" style={{ maxHeight: '865px', overflowY: 'auto' }}>
         {data.results && data.results
-          .filter((item) => item.aspect_ratio === '1:1' && item.credits[0].name !== null)
+          .filter((item) => 
+          item.aspect_ratio === '1:1' && 
+          item.credits[0]?.name !== null &&
+          item.thumbnail_url !== null &&
+          item.nutrition !== null &&
+          item.tags[0]?.name !== null &&
+          item.description !== null
+          )
           .map((result, index) => (
             <RecommendCard
               key={index}
