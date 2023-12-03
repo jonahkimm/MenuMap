@@ -12,7 +12,7 @@ export default class RecommendCard extends React.Component {
     };
   }
   render() {
-    const { name, author, image, nutrition, description } = this.props;
+    const { name, author, image, nutrition, description, cuisine } = this.props;
 
     return (
       <div className='font-sans h-40 p-5 relative top-1 bg-gray-100 mb-2 xl:ml-0 lg:ml-1' >
@@ -31,7 +31,7 @@ export default class RecommendCard extends React.Component {
         </div>
         </div>
         createPortal (
-        <RecommendPopup restaurant={{ name: name, author:author, image:image, nutrition:nutrition, description:description}} open={this.state.openResCard} onClose={() => this.setState({ openResCard: false })} />
+        <RecommendPopup restaurant={{ name: name, author:author, image:image, nutrition:nutrition, description:description, cuisine:cuisine}} open={this.state.openResCard} onClose={() => this.setState({ openResCard: false })} />
         )
       </div>
     );

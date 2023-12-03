@@ -10,9 +10,17 @@ import useLocationFetch from '../hooks/useLocationFetch';
 
 const EmbededMap = ({ newData }) => {
     const location = useLocationFetch();
-    const userLatitude = Number(location.userLocation.coordinates.latitude);
-    const userLongitude = Number(location.userLocation.coordinates.longitude);
-
+    var userLatitude,userLongitude;
+    
+    if(location.userLocation.loadedin)
+     {
+    userLatitude = Number(location.userLocation.coordinates.latitude);
+    userLongitude = Number(location.userLocation.coordinates.longitude);
+    }
+    else {
+    userLatitude = 49.27855565599999;
+    userLongitude = -122.91953997726202;
+    }
     const position = { lat: userLatitude, lng: userLongitude }
 
 
@@ -28,7 +36,7 @@ const EmbededMap = ({ newData }) => {
 
     console.log(newData)
     return (
-        <APIProvider apiKey="///AIzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k">
+        <APIProvider apiKey="AIzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k">
 
             <div style={{ height: "100vh", width: "100%" }}>
                 <Map zoom={9} center={position} mapId="30c45397d92e6144" style={style} >
