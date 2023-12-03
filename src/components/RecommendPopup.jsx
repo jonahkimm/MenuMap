@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { createPortal } from 'react-dom';
+import { Context } from './Context';
 
 const RecommendPopup = ({ open, onClose, restaurant }) => {
+    /* eslint-disable no-unused-vars */
+    const {resoSearch, setResoSearch} = useContext(Context);
+    /* eslint-disable no-unused-vars */
     if (!open) return null;
 
     return createPortal(
@@ -44,6 +48,22 @@ const RecommendPopup = ({ open, onClose, restaurant }) => {
                         >
                             Close
                         </button>
+                    </div>
+                    <div className="absolute p-6 pt-0 right-0 bottom-0">
+                    <button
+                            onClick={()=> {
+                                setResoSearch({cuisine: restaurant.cuisine,
+                                inquire:true
+                                } );
+                                onClose();
+                            }}
+                            data-ripple-light="true"
+                            type="button"
+                            className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-gray-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                        >
+                            Restaurant Search
+                        </button>
+                    
                     </div>
                 </div>
             </div>

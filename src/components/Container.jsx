@@ -1,14 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import Recommendations from "./Recommendations";
 import MiddleSearch from "./MiddleSearch";
 import Map from "./Map";
 import useSearch from '../hooks/useSearch';
 import useLocationFetch from '../hooks/useLocationFetch';
-
+import { Context } from "./Context";
 
 const ContainerGrid = () => {
   const location = useLocationFetch();
   var userLatitude, userLongitude;
+  const {resoSearch, setResoSearch} = useContext(Context);
 
   if(location.userLocation.loadedin)
   {
@@ -40,7 +41,24 @@ const ContainerGrid = () => {
     language: 'en',
     region: 'us',
   });
+/* eslint-disable */
+  useEffect(()=>{
+    if(resoSearch.cuisine !== '' && resoSearch.inquire)
+    {
+      if(resoSearch.cuisine === 'north_american')
+      resoSearch.cuisine = 'american restaurant';
 
+      setSearchParam(resoSearch.cuisine);
+      
+      setResoSearch({
+        cuisine: '',
+        inquire: false
+      });
+    
+    }
+    refetch();
+  },[resoSearch.inquire])
+/* eslint-enable */
   return (
     <div>
       <input
