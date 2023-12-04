@@ -9,11 +9,41 @@
 
 MenuMap caters to a diverse user base, from students👩🏻‍🎓 on a budget to adventurous eaters looking for a great recommendation. The app will take inputs🔤 from the user such as desired price range, type of cuisine and dietary restrictions to filter nearby restaurants and display the choices on an interactive map📍.
 
+**Link to website**: https://menumap.netlify.app
+
 ## Contents
-1. [Tech Stack](#tech-stack)
-2. [Application Features](#application-features)
-3. [Licence](#licence)
-3. [Acknowledgements](#acknowledgements)
+1. [Getting Started](#getting-started)
+2. [Tech Stack](#tech-stack)
+3. [Application Features](#application-features)
+4. [Licence](#licence)
+5. [Acknowledgements](#acknowledgements)
+
+## Getting Started
+To setup the project locally, follow the instructions below-
+
+### Prerequisites
+* **npm**  
+if not already installed, refer to the [installation guide🔗](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)  
+after installation, run the following command to validate-
+    ```bash
+    npm --version
+    ```
+
+### Installation
+1. Clone the repository using the following command-
+    ```bash
+    git clone git@github.com:jonahkimm/MenuMap.git
+    ```
+
+2. Install required packages
+    ```bash
+    npm install 
+    ```
+
+3. Run the Application
+    ```bash
+    npm start
+    ```
 
 ## Tech Stack
 
@@ -56,6 +86,10 @@ pins nearby restaurants on a map with a brief summary of what they offer
 5. **Restaurant Info**  
 provides a link to restaurant website, their contact number & many more :)
 ![Information](./src/assets/info.gif)
+
+6. **Filtering Based on Location**
+displays nearby restaurants on the basis of location input.
+![location](./src/assets/location.gif)
 
 ## Licence
 Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
