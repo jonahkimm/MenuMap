@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useParams } from "react-router-dom";
 import {
     APIProvider,
     Map,
@@ -6,28 +7,16 @@ import {
     Pin,
     InfoWindow,
 } from "@vis.gl/react-google-maps";
-import useLocationFetch from '../hooks/useLocationFetch';
 
 const EmbededMap = ({ newData }) => {
-    const location = useLocationFetch();
-    var userLatitude,userLongitude;
-    
-    if(location.userLocation.loadedin)
-     {
-    userLatitude = Number(location.userLocation.coordinates.latitude);
-    userLongitude = Number(location.userLocation.coordinates.longitude);
-    }
-    else {
-    userLatitude = 49.27855565599999;
-    userLongitude = -122.91953997726202;
-    }
-    const position = { lat: userLatitude, lng: userLongitude }
+    const { lat, lng } = useParams();
 
+    const position = { lat: parseFloat(lat), lng: parseFloat(lng) }
 
     const [open, setOpen] = useState(false);
 
     const style = {
-        height: '100%',
+        height: '885px',
         width: '33%',
         right: 0,
         top: '11.5vh',
@@ -36,13 +25,23 @@ const EmbededMap = ({ newData }) => {
 
     console.log(newData)
     return (
-        <APIProvider apiKey="AIzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k">
+        <APIProvider apiKey="///AIzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k">
 
-            <div style={{ height: "100vh", width: "100%" }}>
+            <div className="">
                 <Map zoom={9} center={position} mapId="30c45397d92e6144" style={style} >
                     {newData.data &&
                         newData.data
-                            .filter((item) => item.photos_sample[0].photo_url !== null)
+                            .filter((item) => 
+                            item.name !== null &&
+                            item.street_address !== null &&
+                            item.subtypes[0] !== null &&
+                            item.price_level !== null &&
+                            item.rating !== null &&
+                            item.photos_sample[0]?.photo_url !== null &&
+                            item.phone_number !== null &&
+                            item.about?.summary !== null &&
+                            item.website !== null
+                            )
                             .map((data, index) => (
                                 <AdvancedMarker position={{ lat: data.latitude, lng: data.longitude }} onClick={() => setOpen(true)}>
                                     <Pin background={"pink"} borderColor={"black"} glyphColor={"red"} />
