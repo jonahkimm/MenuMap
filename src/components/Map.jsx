@@ -22,8 +22,6 @@ const EmbededMap = ({ newData }) => {
         top: '11.5vh',
         position: 'absolute',
     }
-
-    console.log(newData)
     return (
         <APIProvider apiKey="///AIzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k">
 
@@ -43,11 +41,12 @@ const EmbededMap = ({ newData }) => {
                             item.website !== null
                             )
                             .map((data, index) => (
-                                <AdvancedMarker position={{ lat: data.latitude, lng: data.longitude }} onClick={() => setOpen(true)}>
+                                <AdvancedMarker key={index} position={{ lat: data.latitude, lng: data.longitude }} onClick={() => setOpen(true)}>
                                     <Pin background={"pink"} borderColor={"black"} glyphColor={"red"} />
                                     {open && <InfoWindow position={{ lat: data.latitude, lng: data.longitude }} onCloseClick={() => setOpen(false)}>
                                         <p>{data.about.summary}</p>
                                     </InfoWindow>}
+                                    
                                 </AdvancedMarker>
 
                             ))}

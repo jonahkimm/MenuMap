@@ -39,7 +39,7 @@ const Welcome = () => {
                     <div>
                         <input
                             {...getInputProps({
-                                placeholder: 'Search Places ...',
+                                placeholder: 'Search Places',
                                 className: 'location-search-input',
                             })}
                         />
@@ -72,9 +72,6 @@ const Welcome = () => {
         </div>
 
     )
-
-
-
 }
 
 export default Welcome
