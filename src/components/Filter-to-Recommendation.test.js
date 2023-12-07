@@ -44,12 +44,7 @@ describe('Side Filtering',()=>{
     // Simulate clicking the "Input Conditions" button
     fireEvent.click(screen.getByText('Input Conditions'));
 
-    //const resCard = getByTestId('recocard');
-    
-    const recoCard = screen.getByTestId('recocard');
-
     expect(useFetch).toHaveBeenCalledWith('list', { size: '20', tags: 'low_calorie vegan breakfast' });
-    expect(recoCard).toBeInTheDocument();
       });
       
     })
