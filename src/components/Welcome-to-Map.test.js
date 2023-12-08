@@ -49,7 +49,7 @@ jest.mock('@vis.gl/react-google-maps', () => ({
         </React.Fragment>
       );
       // Simulate user interaction in Welcome page
-      const button = screen.getByText('Button');
+      const button = screen.getByText('Enter');
   
       // Wrap in act to handle asynchronous code
       await act(async () => {
