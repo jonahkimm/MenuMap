@@ -23,13 +23,13 @@ const EmbededMap = ({ newData }) => {
         position: 'absolute',
     }
     return (
-        <APIProvider apiKey="///AIzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k">
+        <APIProvider apiKey="///IzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k">
 
             <div className="">
                 <p className="lat">Lat:{position.lat}</p>
                 <p className="lng">Long:{position.lng}</p>
 
-                <Map zoom={9} center={position} mapId="30c45397d92e6144" style={style} >
+                <Map zoom={13} center={position} mapId="30c45397d92e6144" style={style} >
                     {newData.data &&
                         newData.data
                             .filter((item) => 
@@ -44,8 +44,8 @@ const EmbededMap = ({ newData }) => {
                             item.website !== null
                             )
                             .map((data, index) => (
-                                <AdvancedMarker key={index} position={{ lat: data.latitude, lng: data.longitude }} onClick={() => setOpen(true)} data-testid="advanced-marker">
-                                    <Pin background={"pink"} borderColor={"black"} glyphColor={"red"} data-testid="pin"/>
+                                <AdvancedMarker key={index} position={{ lat: data.latitude, lng: data.longitude }} onClick={() => setOpen(true)}>
+                                    <Pin background={"pink"} borderColor={"black"} glyphColor={"red"}/>
                                     {open && <InfoWindow position={{ lat: data.latitude, lng: data.longitude }} onCloseClick={() => setOpen(false)}>
                                         <p>{data.about.summary}</p>
                                     </InfoWindow>}
