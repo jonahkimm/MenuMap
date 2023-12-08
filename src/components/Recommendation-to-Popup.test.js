@@ -7,7 +7,7 @@ import { Context } from './Context'
 describe('RecommendCard', ()=>{
 
     //Integration test to check that RecommendCard popup renders and has the correct data
-    //fed from RecommendCard
+    //fed from RecommendCard.
   it('closes when close button is clicked', ()=>{
    const addContext = jest.fn();
 
@@ -27,7 +27,8 @@ describe('RecommendCard', ()=>{
     const testCard = screen.getByTestId("recocard");
     fireEvent.click(testCard);
     const popupTest = screen.getByTestId('popup');
-
+    
+    //Expect value to be in popup
     expect(popupTest).toHaveTextContent('chicken test dish');
   })
 })

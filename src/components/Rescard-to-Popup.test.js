@@ -24,6 +24,7 @@ describe('Rescard popup', ()=>{
             fireEvent.click(testCard);
             const popupTest = screen.getByTestId('popup');
 
+            //Expect value to be in popup
             expect(popupTest).toHaveTextContent('test avenue');
         })
 })
