@@ -97,10 +97,17 @@ Distributed under the MIT License. See [LICENSE](./LICENSE) for more information
 ## Acknowledgements
 
 1. AI Declaration Forms  
-[Jonah Kim](./Milestone1AIDisclosure/ProjectMileston1_AI_Declaration_Jonah_Kim_301395290.pdf)  
-[Aarham Haider](./Milestone1AIDisclosure/ProjectMileston1_AI_Declaration_Aarham_Haider_301462422.pdf)  
-[Jeet Patel](./Milestone1AIDisclosure/ProjectMileston1_AI_Declaration_Jeet_Patel_301573108.pdf)  
-[Aryaman Bahuguna](./Milestone1AIDisclosure/P1_AI_Declaration_Aryaman_Bahuguna_301563474.pdf)
+    **Milestone1**  
+        - [Jonah Kim](./Milestone1AIDisclosure/ProjectMileston1_AI_Declaration_Jonah_Kim_301395290.pdf)  
+        - [Aarham Haider](./Milestone1AIDisclosure/ProjectMileston1_AI_Declaration_Aarham_Haider_301462422.pdf)  
+        - [Jeet Patel](./Milestone1AIDisclosure/ProjectMileston1_AI_Declaration_Jeet_Patel_301573108.pdf)  
+        - [Aryaman Bahuguna](./Milestone1AIDisclosure/P1_AI_Declaration_Aryaman_Bahuguna_301563474.pdf)  
+
+    **Milestone2**  
+        - [Jonah Kim](./Milestone2AIDisclosure/P2_AI_Declaration_Jonah_Kim_301395290.pdf)  
+        - [Aarham Haider](./Milestone2AIDisclosure/P2_AI_Declaration_Aarham_Haider_301462422.pdf)  
+        - [Jeet Patel](./Milestone2AIDisclosure/P2_AI_Declaration_Jeet_Patel_301573108.pdf)  
+        - [Aryaman Bahuguna](./Milestone2AIDisclosure/P2_AI_Declaration_Aryaman_Bahuguna_301563474.pdf)  
 
 2. Resources  
 [Documentation](https://visgl.github.io/react-google-maps/docs/get-started)  
