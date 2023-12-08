@@ -9,7 +9,7 @@ import { useParams  } from 'react-router-dom';
 const ContainerGrid = () => {
   const {resoSearch, setResoSearch} = useContext(Context);
 
-  const [searchParam, setSearchParam] = useState('');
+  const [searchParam, setSearchParam] = useState('chicken restaurants');
   const handleKeyPress = (event) => {
     if (searchParam === '' && event.key === 'Enter') {
       return;
