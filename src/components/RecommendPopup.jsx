@@ -9,9 +9,9 @@ const RecommendPopup = ({ open, onClose, restaurant }) => {
     if (!open) return null;
 
     return createPortal(
-        <div>
+        <div data-testid='popup'>
             {/* Overlay to darken the background */}
-            <div data-testid='popup' className="fixed inset-0 bg-black opacity-50 z-40"></div>
+            <div  className="fixed inset-0 bg-black opacity-50 z-40"></div>
 
             {/* Popup */}
             <div className="fixed inset-0 flex items-center justify-center z-50 xl:scale-100 lg:scale-75">

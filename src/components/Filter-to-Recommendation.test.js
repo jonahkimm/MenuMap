@@ -42,7 +42,7 @@ describe('Side Filtering',()=>{
     fireEvent.click(screen.getByLabelText('Breakfast'));
 
     // Simulate clicking the "Input Conditions" button
-    fireEvent.click(screen.getByText('Input Conditions'));
+    fireEvent.click(screen.getByText('Input'));
 
     expect(useFetch).toHaveBeenCalledWith('list', { size: '20', tags: 'low_calorie vegan breakfast' });
       });
