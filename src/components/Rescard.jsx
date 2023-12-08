@@ -22,7 +22,7 @@ export default class Rescard extends React.Component {
 
       <div className='font-sans xl:h-96 lg:h-80 xl:ml-0 lg:ml-3 relative top-0 mb-2'>
 
-        <div data-testid='rescard' className='absolute xl:h-96 rounded-lg lg:h-80 w-full bg-gray-100 border-4 border-gray-200 hover:border-pink-400' onClick={() => this.setState({ openResCard: true })} >
+        <div data-testid='rescard' className='absolute xl:h-96 rounded-lg lg:h-80 w-full bg-gray-100 border-4 border-gray-200 hover:border-rose-400' onClick={() => this.setState({ openResCard: true })} >
 
         <div id="resname">
           <h1 className='xl:text-xl lg:text-lg font-bold absolute left-4 top-3 inline-block'>{name}</h1>

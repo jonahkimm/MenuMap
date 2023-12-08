@@ -64,14 +64,13 @@ const ContainerGrid = () => {
 /* eslint-enable */
   return (
     <div>
-      <p>{coordinates.lat} and {coordinates.lng}</p>
       <input
-        placeholder="Type to search"
+        placeholder="Type a food type or cusine"
         type="search"
         value={searchParam}
         onChange={(event) => setSearchParam(event.target.value)}
         onKeyPress={handleKeyPress}
-        className="border border-gray-300 focus:ring-indigo-600 focus:border-indigo-600 left-1/3 sm:text-sm w-full rounded-lg pt-2 pb-2 pl-10 px-3 py-2 lg:block hidden absolute top-3 max-w-xs"
+        className="border border-gray-300 focus:ring-rose-600 focus:border-rose-500 left-1/3 sm:text-sm w-full rounded-lg pt-2 pb-2 pl-10 px-3 py-2 lg:block hidden absolute top-3 max-w-xs"
       />
 
       <div className="grid grid-cols-3">

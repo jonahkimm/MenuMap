@@ -47,7 +47,7 @@ describe('Integration Test For Map.jsx', () => {
     await act(async () => {});
 
     // Assert that the rendered map contains the expected markers
-    const markers = screen.getByText('Lat:37.7749');
+    const markers = screen.getByText('Your Latitude:37.7749');
     expect(markers).toBeTruthy();
 
     // You can add more assertions based on your component's expected behavior

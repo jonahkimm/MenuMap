@@ -50,14 +50,14 @@ const Recommendations = () => {
   return (
     <div className='grid grid-cols-4'>
 
-      <div className="bg-white-200 p-4 col-span-1">
+      <div className="bg-white-200 p-4 col-span-1 mt-24">
         <h2 className="text-l xl:pt-4 lg:pt-0 font-bold mb-4">Restrictions </h2>
 
         {checkboxOptions.map((option) => (
           <div key={option.value}>
             <label className="text-grey">
               <input
-                className="dark:border-white-400/20 xl:mb-12 lg:mb-5 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-4 h-4"
+                className="dark:border-white-400/20 xl:mb-12 lg:mb-5 dark:scale-100 transition-all duration-500 ease-in-out dark:hover:scale-110 dark:checked:scale-100 w-4 h-4 accent-rose-300"
                 type="checkbox"
                 onChange={() => handleCheckboxChange(option.value)}
                 checked={enabledValues[option.value] === '1'}
@@ -68,14 +68,14 @@ const Recommendations = () => {
         ))}
 
         <button
-          className="border rounded-lg p-3 bg-pink-400 text-neutral-100 hover:scale-100"
+          className="border rounded-lg p-3 bg-rose-400 text-neutral-100 hover:scale-100"
           onClick={handleInputConditions}
         >
           Input
         </button>
       </div>
       <div className="col-span-3">
-      <p className='text-xl font-bold mb-4 mt-7'>Recommendations:</p>
+      <p className='text-xl font-bold mb-4 mt-24'>Recommendations:</p>
 
       <div className="scrollable-container" style={{ maxHeight: '865px', overflowY: 'auto' }}>
         {data.results && data.results

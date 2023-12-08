@@ -12,7 +12,7 @@ const useSearch = (endpoint, query) => {
     url: `https://local-business-data.p.rapidapi.com/${endpoint}`,
     params: {...query},
     headers: {
-      'X-RapidAPI-Key': '27ca2f53e9mshc35318f0fa15d23p16a38ejsn0526f1292bb8',
+      'X-RapidAPI-Key': 'c88ea079e8mshb2b985d98730896p1c722bjsn4505e7f9c114',
       'X-RapidAPI-Host': 'local-business-data.p.rapidapi.com'
     }
   };
