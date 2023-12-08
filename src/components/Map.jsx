@@ -24,7 +24,7 @@ const EmbededMap = ({ newData }) => {
         position: 'absolute',
     }
     return (
-        <APIProvider apiKey="///IzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k">
+        <APIProvider apiKey="IzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k">
 
             <div className="">
                 <div className="mt-10">
