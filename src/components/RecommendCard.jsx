@@ -18,7 +18,7 @@ export default class RecommendCard extends React.Component {
       <div className='font-sans h-40 p-5 relative top-1 bg-gray-100 mb-2 xl:ml-0 lg:ml-1'>
         <div
           data-testid='recocard'
-          className='absolute rounded-lg left-0 top-0 p-5 h-40 w-full border-4 border-gray-200 hover:border-pink-400 grid grid-cols-3'
+          className='absolute rounded-lg left-0 top-0 p-5 h-40 w-full border-4 border-gray-200 hover:border-rose-400 grid grid-cols-3'
           onClick={() => this.setState({ openResCard: true })}
         >
           {/* Image column */}

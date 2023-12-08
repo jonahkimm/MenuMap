@@ -13,7 +13,8 @@ const EmbededMap = ({ newData }) => {
 
     const position = { lat: parseFloat(lat), lng: parseFloat(lng) }
 
-    const [open, setOpen] = useState(false);
+    const [openPin, setOpenPin] = useState(null);
+    
 
     const style = {
         height: '885px',
@@ -26,8 +27,11 @@ const EmbededMap = ({ newData }) => {
         <APIProvider apiKey="///IzaSyAwR7DLNCBpRs-vdVSzECotAGvKKXx745k">
 
             <div className="">
-                <p className="lat">Lat:{position.lat}</p>
-                <p className="lng">Long:{position.lng}</p>
+                <div className="mt-10">
+                    <p className="text-xl font-thin text-rose-500">Your Latitude:{position.lat}</p>
+                    <p className="text-xl font-thin mt-4 text-rose-500">Your Longitude:{position.lng}</p>
+                </div>
+
 
                 <Map zoom={13} center={position} mapId="30c45397d92e6144" style={style} >
                     {newData.data &&
@@ -44,13 +48,14 @@ const EmbededMap = ({ newData }) => {
                             item.website !== null
                             )
                             .map((data, index) => (
-                                <AdvancedMarker key={index} position={{ lat: data.latitude, lng: data.longitude }} onClick={() => setOpen(true)}>
-                                    <Pin background={"pink"} borderColor={"black"} glyphColor={"red"}/>
-                                    {open && <InfoWindow position={{ lat: data.latitude, lng: data.longitude }} onCloseClick={() => setOpen(false)}>
-                                        <p>{data.about.summary}</p>
-                                    </InfoWindow>}
-                                    
-                                </AdvancedMarker>
+                                <AdvancedMarker key={index} position={{ lat: data.latitude, lng: data.longitude }} onClick={() => setOpenPin(index)}>
+                                <Pin background={"pink"} borderColor={"black"} glyphColor={"red"} />
+                                {openPin === index && (
+                                  <InfoWindow position={{ lat: data.latitude, lng: data.longitude }} onCloseClick={() => setOpenPin(null)}>
+                                    <p>{data.about.summary}</p>
+                                  </InfoWindow>
+                                )}
+                              </AdvancedMarker>
 
                             ))}
                 </Map>
