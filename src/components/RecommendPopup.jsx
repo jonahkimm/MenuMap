@@ -9,9 +9,9 @@ const RecommendPopup = ({ open, onClose, restaurant }) => {
     if (!open) return null;
 
     return createPortal(
-        <div>
+        <div data-testid='popup'>
             {/* Overlay to darken the background */}
-            <div className="fixed inset-0 bg-black opacity-50 z-40"></div>
+            <div  className="fixed inset-0 bg-black opacity-50 z-40"></div>
 
             {/* Popup */}
             <div className="fixed inset-0 flex items-center justify-center z-50 xl:scale-100 lg:scale-75">
@@ -45,6 +45,7 @@ const RecommendPopup = ({ open, onClose, restaurant }) => {
                             data-ripple-light="true"
                             type="button"
                             className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-gray-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                            data-testid='popupClose'
                         >
                             Close
                         </button>
@@ -60,6 +61,7 @@ const RecommendPopup = ({ open, onClose, restaurant }) => {
                             data-ripple-light="true"
                             type="button"
                             className="select-none rounded-lg bg-blue-500 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-blue-gray-500/20 transition-all hover:shadow-lg hover:shadow-blue-500/40 focus:opacity-[0.85] focus:shadow-none active:opacity-[0.85] active:shadow-none disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none"
+                            data-testid='resSearchBtn'
                         >
                             Restaurant Search
                         </button>

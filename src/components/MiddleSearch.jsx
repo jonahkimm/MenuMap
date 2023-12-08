@@ -4,7 +4,7 @@ import Rescard from './Rescard';
 const MiddleSearch = ({ newData }) => {
   console.log(newData)
   return (
-    <div>
+    <div data-testid = 'midsearch'>
       <p className="text-xl font-bold ml-6 mb-4 mt-7">Results for:</p>
 
       <div className="scrollable-container" style={{ maxHeight: '865px', overflowY: 'auto' }}>
