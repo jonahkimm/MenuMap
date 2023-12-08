@@ -52,6 +52,7 @@ const EmbededMap = ({ newData }) => {
                                 <Pin background={"pink"} borderColor={"black"} glyphColor={"red"} />
                                 {openPin === index && (
                                   <InfoWindow position={{ lat: data.latitude, lng: data.longitude }} onCloseClick={() => setOpenPin(null)}>
+                                    <p className="text-xl font-semibold">{data.name}</p>
                                     <p>{data.about.summary}</p>
                                   </InfoWindow>
                                 )}
