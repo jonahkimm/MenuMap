@@ -69,27 +69,31 @@ Netlify simplifies the deployment process by providing an intuitive interface wh
 
 1. **Filtering**  
 preset options to filter on the basis of dietary restrictions, allergies, health stats and display recommendations  
-![Filtering GIF](./src/assets/filtering.gif)
+<img src="https://github.com/AarhamH/MyPiano/assets/105332385/e70d2a89-c0b4-4266-b416-06d3b6bede0f" width = "70%"/>
 
-2. **Dish Recommendations**  
+
+3. **Dish Recommendations**  
 this feature is especially curated for adventurous eaters ;)
-![Recommendations](./src/assets/recommendations.png)
+<img src="https://github.com/AarhamH/MyPiano/assets/105332385/82dbed1d-dcf8-47b8-8546-6e9247a7faad" width = "70%"/>
 
-3. **Dish Explanations**  
+
+4. **Dish Explanations**  
 displays a short summary of what the dish is and some health stats
-![Explanation](./src/assets/explanation.gif)
+<img src="https://github.com/AarhamH/MyPiano/assets/105332385/641f3f20-a8cd-4a1c-ae71-72c67a59d2ba" width = "70%"/>
 
-4. **Nearby Restaurants**  
+
+5. **Nearby Restaurants**  
 pins nearby restaurants on a map with a brief summary of what they offer
-![nearby](./src/assets/nearby.gif)
+<img src="https://github.com/AarhamH/MyPiano/assets/105332385/d56a05f0-75b5-4030-bc88-d5589a50be71" width = "70%"/>
 
-5. **Restaurant Info**  
+
+6. **Restaurant Info**  
 provides a link to restaurant website, their contact number & many more :)
-![Information](./src/assets/info.gif)
+<img src="https://github.com/AarhamH/MyPiano/assets/105332385/4adeb218-28ba-4dc2-bec9-371c6c23811b" width = "70%"/>
 
-6. **Filtering Based on Location**
+7. **Filtering Based on Location**
 displays nearby restaurants on the basis of location input.
-![location](./src/assets/location.gif)
+<img src="https://github.com/AarhamH/MyPiano/assets/105332385/5d067617-942b-4a58-8b3a-978113830e1d" width = "70%"/>
 
 ## Licence
 Distributed under the MIT License. See [LICENSE](./LICENSE) for more information.
